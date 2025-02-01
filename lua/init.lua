@@ -9,9 +9,15 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 vim.opt.tabstop = 3
 
-
+-- keymap
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\" -- its mean "\"
 vim.keymap.set('n', '<C-t>', ':Neotree toggle filesystem reveal right<CR>')
+vim.keymap.set('n', '<ScrollWheelUp>', 'k')
+vim.keymap.set('n', '<ScrollWheelDown>', 'j')
+-- vim.keymap.set('i', '<ScrollWheelUp>', '<C-y>')
+-- vim.keymap.set('i', '<ScrollWheelDown>', '<C-e>')
+vim.keymap.set('v', '<ScrollWheelUp>', 'k')
+vim.keymap.set('v', '<ScrollWheelDown>', 'j')
 
 require('config.lazy')
