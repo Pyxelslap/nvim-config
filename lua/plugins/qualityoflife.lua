@@ -78,8 +78,15 @@ return {
 							action = 'Telescope find_files',
 							key = 'f',
 						},
+						{
+							desc = 'NeoTree',
+							group = 'Label',
+							action = 'Neotree toggle filesystem reveal right',
+							key = 't'
+						},
 					},
-				}, }
+				},
+			}
 		end,
 		dependencies = { { 'nvim-tree/nvim-web-devicons' } }
 	}

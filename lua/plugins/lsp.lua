@@ -67,11 +67,15 @@ return {
 				capabilities = capabilities,
 				filetypes = { "css", "scss", "less" }
 			})
+			-- lspconfig.pyright.setup({
+			-- 	capabilities = capabilities,
+			-- 	filetypes = { "python" }
+			-- })
 			--
 			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 		end
 	},
-	{
+	{ -- Formatter
 		'stevearc/conform.nvim',
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
@@ -83,11 +87,13 @@ return {
 					html = { "prettier" },
 					css = { "prettier" },
 					javascript = { "prettier" },
-					typescript = { 'prettier' }
+					typescript = { 'prettier' },
+					yaml = { "prettier" },
+					yml = { "prettier" }
 				},
-				format_on_save = {
+				format_after_save = {
 					lsp_fallback = true,
-					async = false,
+					async = true,
 					timeout_ms = 1000,
 				}
 			})
