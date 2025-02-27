@@ -67,10 +67,10 @@ return {
 				capabilities = capabilities,
 				filetypes = { "css", "scss", "less" }
 			})
-			-- lspconfig.pyright.setup({
-			-- 	capabilities = capabilities,
-			-- 	filetypes = { "python" }
-			-- })
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				filetypes = { "python" }
+			})
 			--
 			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 		end
@@ -89,7 +89,8 @@ return {
 					javascript = { "prettier" },
 					typescript = { 'prettier' },
 					yaml = { "prettier" },
-					yml = { "prettier" }
+					yml = { "prettier" },
+					python = { "black" }
 				},
 				format_after_save = {
 					lsp_fallback = true,

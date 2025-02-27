@@ -13,6 +13,7 @@ vim.opt.tabstop = 3
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\" -- its mean "\"
 vim.keymap.set('n', '<C-t>', ':Neotree toggle filesystem reveal right<CR>')
+vim.keymap.set('n', '<leader>n', ':nohlsearch<CR>')
 vim.keymap.set('n', '<ScrollWheelUp>', 'k')
 vim.keymap.set('n', '<ScrollWheelDown>', 'j')
 -- vim.keymap.set('i', '<ScrollWheelUp>', '<C-y>')
