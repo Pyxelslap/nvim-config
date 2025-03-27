@@ -41,11 +41,8 @@ return {
 				capabilities = capabilities,
 				filetypes = { "html" },
 				init_options = {
-					--- @type boolean Defaults to `true`
 					showAbbreviationSuggestions = true,
-					--- @type "always" | "never" Defaults to `"always"`
 					showExpandedAbbreviation = "always",
-					--- @type boolean Defaults to `false`
 					showSuggestionsAsSnippets = true,
 				},
 			})
@@ -71,6 +68,11 @@ return {
 				capabilities = capabilities,
 				filetypes = { "python" }
 			})
+			lspconfig.intelephense.setup({
+				capabilities = capabilities,
+				cmd = { "/data/data/com.termux/files/home/.local/share/nvim/mason/bin/intelephense", "--stdio" },
+				filetypes = { "php" }
+			})
 			--
 			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 		end
@@ -90,6 +92,7 @@ return {
 					typescript = { 'prettier' },
 					yaml = { "prettier" },
 					yml = { "prettier" },
+					php = { "phpcbf" },
 					python = { "black" }
 				},
 				format_after_save = {
