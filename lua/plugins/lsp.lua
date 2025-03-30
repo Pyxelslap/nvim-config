@@ -70,11 +70,14 @@ return {
 			})
 			lspconfig.intelephense.setup({
 				capabilities = capabilities,
-				cmd = { "/data/data/com.termux/files/home/.local/share/nvim/mason/bin/intelephense", "--stdio" },
 				filetypes = { "php" }
 			})
+			lspconfig.bashls.setup({
+				capabilities = capabilities,
+				filetypes = { "sh" }
+			})
 			--
-			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "Code Action" })
 		end
 	},
 	{ -- Formatter
@@ -109,7 +112,7 @@ return {
 					timeout_ms = 1000,
 
 				})
-			end)
+			end, { desc = "Format this buffer" })
 		end
 	},
 }

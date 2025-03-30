@@ -30,23 +30,12 @@ return {
 		end
 	},
 	{
-		'gelguy/wilder.nvim',
-		config = function()
-			local wilder = require('wilder')
-			wilder.setup({ modes = { ':', '/', '?' } })
-
-			wilder.set_option('renderer', wilder.popupmenu_renderer({
-				highlighter = wilder.basic_highlighter(),
-			}))
-		end
-	},
-	{
 		'wakatime/vim-wakatime',
 		lazy = false
 	},
 	{
 		"kylechui/nvim-surround",
-		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		version = "*",
 		event = "VeryLazy",
 		config = function()
 			require("nvim-surround").setup({
