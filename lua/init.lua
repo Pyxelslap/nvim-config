@@ -8,16 +8,16 @@ vim.opt.scrolljump = 5
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 vim.opt.tabstop = 3
+vim.opt.autochdir = true
 
 -- keymap
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\" -- its mean "\"
 vim.keymap.set('n', '<C-t>', ':Neotree toggle filesystem reveal right<CR>', { desc = "File Manager" })
 vim.keymap.set('n', '<leader>n', ':nohlsearch<CR>', { desc = "Deselect search" })
+vim.keymap.set('t', '<leader><Esc>', [[<C-\><C-n>]])
 vim.keymap.set('n', '<ScrollWheelUp>', 'k')
 vim.keymap.set('n', '<ScrollWheelDown>', 'j')
--- vim.keymap.set('i', '<ScrollWheelUp>', '<C-y>')
--- vim.keymap.set('i', '<ScrollWheelDown>', '<C-e>')
 vim.keymap.set('v', '<ScrollWheelUp>', 'k')
 vim.keymap.set('v', '<ScrollWheelDown>', 'j')
 

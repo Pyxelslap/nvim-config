@@ -39,13 +39,14 @@ return {
 			local telescope = require("telescope")
 
 			telescope.setup({
-				-- your config
+				-- config
 			})
 
 			telescope.load_extension("live_grep_args")
 
 			vim.keymap.set("n", "<leader>fg",
 				":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+			vim.keymap.set("n", "<leader>b", ":Telescope buffers<CR>", { desc = "Buffers" })
 		end
 	}
 }
