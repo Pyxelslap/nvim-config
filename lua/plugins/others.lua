@@ -44,10 +44,6 @@ return {
 		end
 	},
 	{
-		"mattn/emmet-vim",
-		event = { "BufReadPre", "BufNewFile" },
-	},
-	{
 		'nvimdev/dashboard-nvim',
 		event = 'VimEnter',
 		opts = {},
