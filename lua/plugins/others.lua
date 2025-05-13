@@ -75,5 +75,10 @@ return {
 			}
 		end,
 		dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+	},
+	{
+		'vyfor/cord.nvim',
+		build = ':Cord update',
+		-- opts = {}
 	}
 }

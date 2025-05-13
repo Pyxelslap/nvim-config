@@ -8,12 +8,13 @@ return {
 		opts = {
 		},
 		config = function()
+			local env = require('../config/env')
 			require('codecompanion').setup({
 				adapters = {
 					gemini = function()
 						return require("codecompanion.adapters").extend("gemini", {
 							env = {
-								api_key = "YOUR API KEY"
+								api_key = env.gemini_key
 							},
 						})
 					end,
